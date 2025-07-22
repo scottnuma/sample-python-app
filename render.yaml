@@ -1,0 +1,11 @@
+services:
+- type: web
+  name: sample-python-app
+  runtime: python
+  repo: https://github.com/scottnuma/sample-python-app
+  plan: starter
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+version: "1"
+
